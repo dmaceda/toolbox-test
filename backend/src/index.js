@@ -2,7 +2,7 @@ const express = require("express");
 const v1Router = require("./v1/routes/index");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3001;
 
 app.use(express.json());
 app.use((req, res, next) => {

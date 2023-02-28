@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.baseURL = "http://localhost:3001";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

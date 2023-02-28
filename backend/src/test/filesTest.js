@@ -16,7 +16,7 @@ describe("Files", () => {
         .end((err, response) => {
           response.should.have.status(200);
           response.body.should.be.a("array");
-          response.body.length.should.be.eq(3);
+          response.body.length.should.be.eq(5);
           response.body[1].file.should.be.eq("test3.csv");
           response.body[0].lines.should.be.a("array");
           done();
@@ -35,9 +35,9 @@ describe("Files", () => {
 
     it("It should GET all files with given fileName", (done) => {
       const fileName = "test2.csv";
-      const fileText = "XSGXjGwUOhKFQEIbEGCMM";
-      const fileNumber = "11318752906759226720077818339947";
-      const fileHex = "b8fa30113e4c01e32244455cf4c52fa3";
+      const fileText = "zzoyrxfbvPxRXJnQdYJHqBfJUCOr";
+      const fileNumber = "58";
+      const fileHex = "40a25f82aaeac10dce824526b031afc5";
       chai
         .request(server)
         .get(`/files/data?fileName=${fileName}`)

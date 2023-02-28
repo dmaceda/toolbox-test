@@ -25,7 +25,7 @@ const List = () => {
       </thead>
 
       <tbody>
-        {filteredData.length <= 0
+        {filteredData?.length <= 0
           ? data?.map((item, i) => {
               return (
                 item &&

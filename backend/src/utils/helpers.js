@@ -1,7 +1,6 @@
 const axios = require("axios");
-require("dotenv").config();
 
-const { API_KEY } = process.env;
+const API_KEY = "Bearer aSuperSecretKey";
 
 const fetchData = async (req, res) => {
   try {
