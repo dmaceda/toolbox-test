@@ -45,7 +45,6 @@ npm install
 
 ## Inicia el servidor.
 
-
 cd backend
 
 npm start
@@ -66,4 +65,4 @@ npm start
 
 ## Accede a la interfaz de usuario
 
-En tu navegador web en http://localhost:3001/
+En tu navegador web en http://localhost:3000/

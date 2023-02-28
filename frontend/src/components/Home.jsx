@@ -7,9 +7,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <div className="container">
-        <List />
-      </div>
+      <List />
       <Footer />
     </>
   );

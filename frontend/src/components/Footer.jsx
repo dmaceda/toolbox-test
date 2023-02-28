@@ -6,7 +6,7 @@ const Footer = () => {
       <p>
         Copyright &copy; 2023 By
         <a
-          href="https://www.linkedin.com/in/dmaceda/"
+          href="https://dmaceda.github.io/Portfolio/"
           target="_blank"
           rel="noreferrer"
         >

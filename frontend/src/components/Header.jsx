@@ -15,7 +15,6 @@ const Header = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     setFileName(e.target.value);
-    dispatch(setFlag(e.target.value));
     return fileName;
   };
 
@@ -25,6 +24,7 @@ const Header = () => {
       alert("File name required");
     } else {
       dispatch(filterByName(fileName));
+      dispatch(setFlag(fileName));
       setFileName("");
     }
   };
@@ -37,6 +37,7 @@ const Header = () => {
   function handleKeyUp(event) {
     if (event.target.value === "") {
       dispatch(refreshState());
+      dispatch(setFlag(""));
     }
   }
 
@@ -44,7 +45,12 @@ const Header = () => {
     <Navbar bg="dark" variant="dark">
       <Container fluid>
         <Navbar.Brand href="/">
-          <img src={logo} alt="Logotipo de la Compañia" width="200px" />
+          <img
+            src={logo}
+            alt="Logotipo de la Compañia"
+            width="200px"
+            id="img"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -53,7 +59,7 @@ const Header = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           ></Nav>
-          <Form className="d-flex">
+          <Form className="d-flex ">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -63,7 +69,7 @@ const Header = () => {
               onKeyDown={handleKeyDown}
               onKeyUp={handleKeyUp}
             />
-            <Button variant="danger" onClick={handleSubmit}>
+            <Button variant="danger" onClick={handleSubmit} id="btn">
               Search
             </Button>
           </Form>
